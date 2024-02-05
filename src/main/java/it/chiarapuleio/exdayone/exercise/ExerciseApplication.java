@@ -16,6 +16,7 @@ public class ExerciseApplication {
 		MenuList ml = (MenuList) ctx.getBean("getMenu");
 
 		System.out.println(ml);
+		ctx.close();
 	}
 
 }
