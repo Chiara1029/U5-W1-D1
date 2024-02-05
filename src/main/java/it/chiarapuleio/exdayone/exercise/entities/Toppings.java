@@ -14,6 +14,6 @@ public class Toppings extends SuperMenu {
                 "name='" + name + '\'' +
                 ", kcal=" + kcal +
                 ", price=" + price +
-                '}';
+                '}' + '\'';
     }
 }

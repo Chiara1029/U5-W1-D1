@@ -29,6 +29,6 @@ public class Pizza  extends SuperMenu {
                 ", name='" + name + '\'' +
                 ", kcal=" + kcal +
                 ", price=" + price +
-                '}';
+                '}' + '\'' ;
     }
 }

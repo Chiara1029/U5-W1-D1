@@ -1,6 +1,7 @@
 package it.chiarapuleio.exdayone.exercise;
 
 import it.chiarapuleio.exdayone.exercise.entities.Drink;
+import it.chiarapuleio.exdayone.exercise.entities.MenuList;
 import it.chiarapuleio.exdayone.exercise.entities.Pizza;
 import it.chiarapuleio.exdayone.exercise.entities.Toppings;
 import org.springframework.context.annotation.Bean;
@@ -66,5 +67,27 @@ public class BeansConfig {
         List<Toppings> toppings = new ArrayList<>();
         toppings.add(getSalami());
         return new Pizza("Salami", 1160, 5.99, toppings);
+    }
+
+    @Bean
+    MenuList getMenu(){
+        List<Pizza> pizzas = new ArrayList<>();
+        pizzas.add(getMargherita());
+        pizzas.add(getHawaiianPizza());
+        pizzas.add(getSalamiPizza());
+        //
+        List<Toppings> toppings = new ArrayList<>();
+        toppings.add(getCheese());
+        toppings.add(getHam());
+        toppings.add(getOnions());
+        toppings.add(getPineapple());
+        toppings.add(getSalami());
+        //
+        List<Drink> drinks = new ArrayList<>();
+        drinks.add(getLemonade());
+        drinks.add(getWater());
+        drinks.add(getWine());
+        //
+        return new MenuList(pizzas, drinks, toppings);
     }
 }

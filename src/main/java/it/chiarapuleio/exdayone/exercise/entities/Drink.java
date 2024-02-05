@@ -17,6 +17,6 @@ public class Drink extends SuperMenu {
                 "name='" + name + '\'' +
                 ", kcal=" + kcal +
                 ", price=" + price +
-                '}';
+                '}' + '\'';
     }
 }
